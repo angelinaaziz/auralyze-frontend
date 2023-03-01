@@ -13,7 +13,7 @@ import {useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import setAuthToken from "../../../store/actions/utils/setAuthToken";
 import jwt_decode from "jwt-decode";
-import {updateLoginState} from "../../../store/features/login/login-slice"
+import {updateLoginState,setUserID} from "../../../store/features/login/login-slice"
 
 const isEmpty = require("is-empty");
 const styles = (theme) => ({
@@ -88,6 +88,7 @@ function LoginDialog(props) {
             if (!isEmpty(decoded)) {
               console.log(decoded)
               dispatch(updateLoginState(true));
+              dispatch(setUserID(decoded))
             }
 
           })

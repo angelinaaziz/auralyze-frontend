@@ -3,6 +3,8 @@ import VideoRecorder from 'react-video-recorder'
 import withStyles from '@mui/styles/withStyles';
 import classNames from 'classnames';
 import SendIcon from '@mui/icons-material/Send';
+import axios from "axios";
+import {useSelector, useDispatch } from "react-redux";
 
 const styles = (theme) => ({
   mainContainer: {
@@ -144,6 +146,18 @@ const styles = (theme) => ({
     alignItems: "center",
     justifyContent: "center"
   },
+  submitInput: {
+    border: "none",
+    background: "#bfa4f8",
+    height: "40px",
+    width: "90px",
+    borderRadius: "10px",
+    color: "white",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    cursor:'pointer'
+  },
   btns: {
     display: "flex"
   }
@@ -157,7 +171,11 @@ function QuestionPage(props) {
   const [userTimeLimit, setUserTimeLimit] = useState(300000)
   const [userCountDown, setUserCountDown] = useState(5000)
   const [chats, setChats]= useState([])
+  const [videoRecorded, setVideoRecorded]=useState(false)
+  const [videoBlob,setVideoBlob]=useState()
 
+  const userID = useSelector((state) => state.login.userID)
+  console.log(userID)
   const message = useRef()
 
   useEffect(() => {
@@ -188,7 +206,35 @@ let handleSendChat = () => {
   message.current.value = ""
   message.current.focus()  
 }}
+  function handleSubmitVideo(){
+    console.log('submiting video')
 
+    let formData = new FormData();
+    let fileName = `${selectedQuestion}.${'mp4'}`;
+    let file = new File([videoBlob], fileName);
+    
+    console.log('video file....')
+    console.log(file)
+    formData.append('file', file);
+    formData.append('upload_preset',"aue92bwk");
+   
+          // Post request to cloudinary to save current image file
+    var instance = axios.create();
+    delete instance.defaults.headers.common['Authorization'];
+    instance.post("https://api.cloudinary.com/v1_1/busy-bee/video/upload",formData).then(response=>{
+       
+    console.log(response)
+      let answerData={question:selectedQuestion,
+                      userID:userID,
+                      video:response.data.secure_url}
+      axios.post("/api/users/save-answer", answerData).then((res ) => {
+        console.log('response from save answers api..')
+        console.log(res)
+      })
+    })
+
+    
+  }
   return (
     <React.Fragment>
       <h2 className="question">  {selectedQuestion} </h2>
@@ -219,9 +265,12 @@ let handleSendChat = () => {
                   body:videoBlob,
                   'ContentType': 'video/webm',
                  })
-                  .then(res=>console.log(res))
+                  .then(res=>{console.log(res)
+                             })
                   .catch(error=>console.log(error))
                 console.log("videoBlob", videoBlob);
+                setVideoBlob(videoBlob)
+                setVideoRecorded(true)
               }
 }
             />
@@ -248,6 +297,16 @@ let handleSendChat = () => {
 
             </div>
           </div>
+          {videoRecorded?
+            <div>
+            <button className={classes.submitInput} 
+                    onClick={() => handleSubmitVideo()}>
+                <p>Submit Response</p>
+              </button>
+            </div>
+            :
+            null
+          }
 
           <div className={classNames("questionAreaNotes questionPageSection", classes.textSide)}>
             <p className={classes.chatHead}>Some Space to gather your thoughts</p>

@@ -16,11 +16,14 @@ const loginSlice = createSlice({
     updateLoginState(state, action) {
       state.isAuthenticated = action.payload;
     },
+    setUserID(state,action){
+      state.userID=action.payload.id
+    }
   },
 });
 
 // Export each reducers function defined in createSlice
-export const { updateLoginState } = loginSlice.actions;
+export const { updateLoginState,setUserID } = loginSlice.actions;
 
 
 // Export default the slice reducer

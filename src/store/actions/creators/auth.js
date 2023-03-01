@@ -1,10 +1,14 @@
-import axios from "axios";
 import setAuthToken from "../utils/setAuthToken";
-import jwt_decode from "jwt-decode";
-import {USER_LOADING} from '../types/auth';
 import {updateLoginState} from "../../../store/features/login/login-slice"
-const isEmpty = require("is-empty");
+import {USER_LOADING,SET_CURRENT_USER} from '../types/auth';
 
+// Set logged in user
+export const setCurrentUser = decoded => {
+  return {
+    type: SET_CURRENT_USER,
+    payload: decoded
+  };
+};
 // User loading
 export const setUserLoading = () => {
   return {
