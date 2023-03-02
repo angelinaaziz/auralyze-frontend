@@ -104,7 +104,7 @@ function LoginDialog(props) {
                 setPasswordIncorrect(true)
               }
             })
-      }, [setIsLoading, loginEmail,history, loginPassword, setStatus,dispatch]);
+      }, [setIsLoading, loginEmail, loginPassword, setStatus,dispatch]);
 
   return (
     <Fragment>
