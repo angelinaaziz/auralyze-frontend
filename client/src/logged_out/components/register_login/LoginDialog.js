@@ -98,10 +98,12 @@ function LoginDialog(props) {
               if(err.response.data.emailnotfound){
                 console.log('email not found')
                 setEmailNotFound(true)
+                setIsLoading(false);
               }
               if(err.response.data.passwordincorrect){
                 console.log('password incorrect')
                 setPasswordIncorrect(true)
+                setIsLoading(false);
               }
             })
       }, [setIsLoading, loginEmail, loginPassword, setStatus,dispatch]);
