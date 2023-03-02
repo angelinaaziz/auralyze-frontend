@@ -216,12 +216,12 @@ let handleSendChat = () => {
     console.log('video file....')
     console.log(file)
     formData.append('file', file);
-    formData.append('upload_preset',"aue92bwk");
+    formData.append('upload_preset',"ydan73a9");
    
           // Post request to cloudinary to save current image file
     var instance = axios.create();
     delete instance.defaults.headers.common['Authorization'];
-    instance.post("https://api.cloudinary.com/v1_1/busy-bee/video/upload",formData).then(response=>{
+    instance.post("https://api.cloudinary.com/v1_1/dk3j0bnwq/video/upload",formData).then(response=>{
        
     console.log(response)
       let answerData={question:selectedQuestion,
