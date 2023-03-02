@@ -4,7 +4,7 @@ import withStyles from '@mui/styles/withStyles';
 import classNames from 'classnames';
 import SendIcon from '@mui/icons-material/Send';
 import axios from "axios";
-import {useSelector, useDispatch } from "react-redux";
+import {useSelector } from "react-redux";
 
 const styles = (theme) => ({
   mainContainer: {
