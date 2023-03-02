@@ -6,7 +6,7 @@ import FormDialog from "../../../shared/components/FormDialog";
 import HighlightedInformation from "../../../shared/components/HighlightedInformation";
 import ButtonCircularProgress from "../../../shared/components/ButtonCircularProgress";
 import VisibilityPasswordTextField from "../../../shared/components/VisibilityPasswordTextField";
-import {registerUser} from "../../../store/actions/creators/auth"
+// import {registerUser} from "../../../store/actions/creators/auth"
 import { useDispatch } from "react-redux";
 import axios from "axios";
 import setAuthToken from "../../../store/actions/utils/setAuthToken";
