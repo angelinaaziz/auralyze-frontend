@@ -72,6 +72,7 @@ function RegisterDialog(props) {
         
         console.log(decoded)
         dispatch(updateLoginState(true));
+        dispatch(setUserID(decoded))
         setIsLoading(false);
       }
     })
