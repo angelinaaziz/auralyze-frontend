@@ -252,11 +252,7 @@ function RegisterDialog(props) {
               We have created your account. Please click on the link in the
               email we have sent to you before logging in.
             </HighlightedInformation>
-          ) : (
-            <HighlightedInformation>
-              Registration is disabled until we go live.
-            </HighlightedInformation>
-          )}
+          ) : null}
         </Fragment>
       }
       actions={
