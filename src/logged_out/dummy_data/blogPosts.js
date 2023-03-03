@@ -84,15 +84,56 @@ const questionBank = (
 </Fragment>
 );
 
+const interviewConfidence= (
+  <Fragment>
+  <Typography paragraph>
+    As a school student, you’ve spent countless hours studying, working hard to maintain the highest grades, and participating in extracurricular activities to strengthen your application. And now, you’ve received an invitation to attend a university interview – congratulations! But as the day approaches, you find yourself struggling with nerves and anxiety. Don’t worry, it’s completely normal to feel this way. However, you don’t want your nerves to hinder your chances of success. In this quick blog, we’ll give you tips and tricks on how to come across as more confident in your university interviews and get into your dream university
+  </Typography>
+  <Typography variant="h6" paragraph>
+    Prepare, prepare, prepare
+  </Typography>
+  <Typography paragraph>
+  One of the most important ways to feel more confident is to prepare thoroughly for your interview. This means researching the university and the program you’re applying for, practicing common interview questions, and reviewing your application materials. The more prepared you are, the more confident you’ll feel in your ability to answer questions and showcase your strengths. You need a bank of questions to use and get feedback on your answer to be able to reflect. Check out our free bank of qs <a href="/dental-interview-question-bank"> here.</a>
+  </Typography>  
+  <Typography variant="h6" paragraph>
+    Practice your body language
+  </Typography>
+  <Typography paragraph>
+  Your body language speaks volumes, even before you open your mouth to answer questions. Before your interview, practice good posture, make eye contact, and avoid fidgeting or slouching. This will help you come across as more confident and poised. One way to ensure you do this in your online interviews is to make sure you look at the camera not at the screen. Looking at the camera mimics eye contact. Now this doesn’t mean you should stare down your interviewers soul - but rather show engagement and look to the side sometimes when thinking so you don’t look like a weirdo.
+  </Typography>  
+  <Typography variant="h6" paragraph>
+    Speak clearly and concisely
+  </Typography> 
+  <Typography paragraph>
+  During the interview, it’s important to speak clearly and concisely. Take your time to formulate your answers, and avoid rambling or going off-topic. Speak with a strong, steady voice and make sure to enunciate your words. One phrase we think you should use when you get a difficult question is “That is actually a very interesting question, can I have a few moments to think about it please?’ . This gives you time to think and provide an articulate answer and shows evidence to the interviewer that you are actively thinking. 
+  </Typography>   
+  <Typography variant="h6" paragraph>
+    Use storytelling to your advantage
+  </Typography>
+  <Typography paragraph>
+  Telling stories is a great way to showcase your strengths and experiences. When asked a question, try to provide specific examples that illustrate your skills and accomplishments. This will help make your answers more engaging and memorable for the interviewer. Don’t focus so much on what you did but rather look at what skills you got, what you learnt and how it has made you a better fit for the course you are applying for.
+  </Typography>
+  Now that you’ve learned some tips and tricks for coming across as more confident in your university interviews, you’re ready to take the next step. Auralyze.ai is an AI-powered learning tool that analyzes your interview answers and provides personalized feedback to help you improve your performance. Sign up now to start your journey towards interview success!
+  </Fragment>
+);
+
 const posts = [
   {
     title: "Dental Interview Question Bank",
-    id: 6,
-    date: 1676591384,
-    src: `https://www.cv-library.co.uk/career-advice/wp-content/uploads/2022/06/Blog-Popular-interview-questions.jpg`,
+    id: 1,
+    date: 1676927912,
+    src: `https://thefluentlife.com/content/wp-content/uploads/2022/06/4-Ps-in-Preparing-for-an-Interview.jpg`,
     snippet:
       "A list of common dental school interview questions and answers to help you prepare for your next interview.",
     content: questionBank,
+  },
+  {
+    title: "Mastering the Art of Inetrview Confidence",
+    id: 2,
+    date: 1677857496,
+    src: `https://www.naceweb.org/uploadedimages/images/2022/feature/ask-answer-and-observe-preparing-students-to-experience-interviews-from-both-sides-of-the-table.png`,
+    snippet: "In this quick blog, we’ll give you tips and tricks on how to come across as more confident in your university interviews.",
+    content: interviewConfidence,
   },
 ];
 
