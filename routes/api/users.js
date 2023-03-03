@@ -121,7 +121,7 @@ router.post("/save-answer",(req,res)=>{
                                   answerURL:req.body.video});
     user.answers.push(newAnswer);
     user.save();
-    let newMessage="Here is the question: "+req.body.question+ "? here is the user email" + user.email + "And here is the new video"+" "+ req.body.video 
+    let newMessage="Here is the user email:"+user.email+"Here is the question: "+req.body.question+ "? And here is the new video"+" "+ req.body.video
     // sendEmail(user.email, "New Answer Video", newMessage); uncomment to send email to user as well
     sendEmail("angelinaaziz1@gmail.com", "New Answer Video", newMessage)
   })
