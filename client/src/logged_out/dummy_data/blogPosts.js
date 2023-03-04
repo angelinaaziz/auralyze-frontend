@@ -84,36 +84,54 @@ const questionBank = (
 </Fragment>
 );
 
+
 const interviewConfidence= (
   <Fragment>
   <Typography paragraph>
-    As a school student, you’ve spent countless hours studying, working hard to maintain the highest grades, and participating in extracurricular activities to strengthen your application. And now, you’ve received an invitation to attend a university interview – congratulations! But as the day approaches, you find yourself struggling with nerves and anxiety. Don’t worry, it’s completely normal to feel this way. However, you don’t want your nerves to hinder your chances of success. In this quick blog, we’ll give you tips and tricks on how to come across as more confident in your university interviews and get into your dream university
+    As a school student, you’ve spent countless hours studying, working hard to maintain the highest grades, and participating in extracurricular activities to strengthen your application. And now, you’ve received an invitation to attend a university interview – congratulations! But as the day approaches, you find yourself struggling with nerves and anxiety. Don’t worry, it’s completely normal to feel this way. However, you don’t want your nerves to hinder your chances of success. <b>In this quick blog, we’ll give you tips and tricks on how to come across as more confident in your university interviews and get into your dream university.</b>
   </Typography>
   <Typography variant="h6" paragraph>
-    Prepare, prepare, prepare
-  </Typography>
-  <Typography paragraph>
-  One of the most important ways to feel more confident is to prepare thoroughly for your interview. This means researching the university and the program you’re applying for, practicing common interview questions, and reviewing your application materials. The more prepared you are, the more confident you’ll feel in your ability to answer questions and showcase your strengths. You need a bank of questions to use and get feedback on your answer to be able to reflect. Check out our free bank of qs <a href="/dental-interview-question-bank"> here.</a>
-  </Typography>  
-  <Typography variant="h6" paragraph>
-    Practice your body language
+    Prepare, prepare, prepare 🥊 
   </Typography>
   <Typography paragraph>
-  Your body language speaks volumes, even before you open your mouth to answer questions. Before your interview, practice good posture, make eye contact, and avoid fidgeting or slouching. This will help you come across as more confident and poised. One way to ensure you do this in your online interviews is to make sure you look at the camera not at the screen. Looking at the camera mimics eye contact. Now this doesn’t mean you should stare down your interviewers soul - but rather show engagement and look to the side sometimes when thinking so you don’t look like a weirdo.
+    <img src = "https://www.dice.com/binaries/large/content/gallery/dice/insights/2019/03/shutterstock_309942056-2.jpg " alt="interview"/>
+  One of the most important ways to feel more confident is to prepare thoroughly for your interview. This means researching the university and the program you’re applying for, practicing common interview questions, and reviewing your application materials. The more prepared you are, the more confident you’ll feel in your ability to answer questions and showcase your strengths. You need a bank of questions to use and get feedback on your answer to be able to reflect. Check out our free bank of qs <a href="/blog/post/dental-interview-question-bank"> here.</a>
   </Typography>  
   <Typography variant="h6" paragraph>
-    Speak clearly and concisely
+  Dress for success  👨‍🏫 
+  </Typography>
+  <Typography paragraph>
+  <iframe src="https://giphy.com/embed/Ym3AjvQQf4AfNZbvri" width="480" height="343" frameBorder="0" class="giphy-embed" allowFullScreen title="outfitgif"/><br />
+  Another great way to boost your confidence before an important job interview is to dress professionally. This doesn't necessarily mean having to wear a full suit and tie, but rather selecting an outfit that you feel confident and comfortable in. By feeling your best in what you're wearing, it will be reflected in your body language and communication skills. Dressing appropriately for an interview can also help to make a positive impression, as the interviewer will be able to see that you’ve taken the time to carefully select your attire.
+  </Typography>  
+  <Typography variant="h6" paragraph>
+    Use storytelling to your advantage 🧾 
+  </Typography>
+  <Typography paragraph>
+  Telling stories is a great way to showcase your strengths and experiences. When asked a question, try to provide specific examples that illustrate your skills and accomplishments. This will help make your answers more engaging and memorable for the interviewer. Don’t focus so much on what you did but rather look at what skills you got, what you learnt and how it has made you a better fit for the course you are applying for.
+  </Typography>
+  <Typography variant="h6" paragraph>
+    Practice your body language 🕺 
+  </Typography>
+  <Typography paragraph>
+  Your body language speaks volumes, even before you open your mouth to answer questions. Before your interview, practice good posture, make eye contact, and avoid fidgeting or slouching. This will help you come across as more confident and poised. One way to ensure you do this in your online interviews is to make sure you look <b>at the camera not at the screen</b>. Looking at the camera mimics eye contact. Now this doesn’t mean you should stare down your interviewers soul - but rather show engagement and look to the side sometimes when thinking so you don’t look like a weirdo.
+  </Typography>  
+  <Typography variant="h6" paragraph>
+    Speak clearly and concisely  🔊 
   </Typography> 
   <Typography paragraph>
   During the interview, it’s important to speak clearly and concisely. Take your time to formulate your answers, and avoid rambling or going off-topic. Speak with a strong, steady voice and make sure to enunciate your words. One phrase we think you should use when you get a difficult question is “That is actually a very interesting question, can I have a few moments to think about it please?’ . This gives you time to think and provide an articulate answer and shows evidence to the interviewer that you are actively thinking. 
   </Typography>   
   <Typography variant="h6" paragraph>
-    Use storytelling to your advantage
-  </Typography>
+    Don’t show your full hand 🃏
+  </Typography> 
   <Typography paragraph>
-  Telling stories is a great way to showcase your strengths and experiences. When asked a question, try to provide specific examples that illustrate your skills and accomplishments. This will help make your answers more engaging and memorable for the interviewer. Don’t focus so much on what you did but rather look at what skills you got, what you learnt and how it has made you a better fit for the course you are applying for.
-  </Typography>
-  Now that you’ve learned some tips and tricks for coming across as more confident in your university interviews, you’re ready to take the next step. Auralyze.ai is an AI-powered learning tool that analyzes your interview answers and provides personalized feedback to help you improve your performance. Sign up now to start your journey towards interview success!
+  <iframe src="https://giphy.com/embed/B7M1hhOdSd4iY" width="480" height="411" frameBorder="0" class="giphy-embed" allowFullScreen title="jokergif"></iframe><br />
+  Now our final tip is a unique one - simply put when you answer a question you should not say everything to the interviewer. Think of a game of UNO - you don’t want to use all the +2s at once because you will lose all your lifelines. Instead you pace yourself - same philosophy with interviews, you want to allow yourself multiple examples for you answers but you do not necessarily have to mention them all at once. General rule is to mention one example per question and add on only when prompted or time permits. This will allow you to never be stumped when asked ‘ anything else’ or ‘ do you have any more examples of x skill’.
+  </Typography>   
+  <Typography paragraph>
+   Now that you’ve learned some tips and tricks for coming across as more confident in your university interviews, you’re ready to take the next step. Auralyze.ai is an AI-powered learning tool that analyzes your interview answers and provides personalized feedback to help you improve your performance. Sign up <a href="/"> here.</a>to start your journey towards interview success!
+   </Typography>
   </Fragment>
 );
 
