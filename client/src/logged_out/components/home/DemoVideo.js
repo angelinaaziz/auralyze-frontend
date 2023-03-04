@@ -4,7 +4,7 @@ import Card from '@mui/material/Card';
 
 const useStyles = makeStyles((theme) => ({
   bigcard: {
-    maxWidth: theme.spacing(150),
+    maxWidth: theme.spacing(130),
     padding: theme.spacing(5),
     borderRadius: theme.spacing(5),
     margin: 'auto',
