@@ -8,8 +8,7 @@ import {Provider} from 'react-redux';
 import store from './store/store';
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
-import { setCurrentUser, logoutUser } from "./store/actions/creators/auth";
-import {updateLoginState} from "./store/features/login/login-slice"
+import {updateLoginState,setCurrentUser} from "./store/features/login/login-slice"
 const LoggedInComponent = lazy(() => import("./logged_in/components/Main"));
 
 const LoggedOutComponent = lazy(() => import("./logged_out/components/Main"));
@@ -21,6 +20,8 @@ if (localStorage.jwtToken) {
   // Decode token and get user info and exp
   const decoded = jwt_decode(token);
   // Set user and isAuthenticated
+  console.log('user already logged in on start')
+  console.log(decoded)
   store.dispatch(setCurrentUser(decoded));
   store.dispatch(updateLoginState(true));
   // store.dispatch(setUserID(decoded))
@@ -28,7 +29,7 @@ if (localStorage.jwtToken) {
   const currentTime = Date.now() / 1000; // to get in milliseconds
   if (decoded.exp < currentTime) {
     // Logout user
-    store.dispatch(logoutUser());
+    // store.dispatch(logoutUser());
     // Redirect to login
     window.location.href = "./login";
   }

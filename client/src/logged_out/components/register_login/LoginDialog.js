@@ -13,7 +13,7 @@ import {useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import setAuthToken from "../../../store/actions/utils/setAuthToken";
 import jwt_decode from "jwt-decode";
-import {updateLoginState,setUserID} from "../../../store/features/login/login-slice"
+import {updateLoginState} from "../../../store/features/login/login-slice"
 import {setCurrentUser} from "../../../store/actions/creators/auth";
 
 const isEmpty = require("is-empty");

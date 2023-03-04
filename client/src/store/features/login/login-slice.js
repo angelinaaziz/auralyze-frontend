@@ -26,7 +26,7 @@ const loginSlice = createSlice({
 });
 
 // Export each reducers function defined in createSlice
-export const { updateLoginState,setUserID } = loginSlice.actions;
+export const { updateLoginState,setUserID,setCurrentUser } = loginSlice.actions;
 
 
 // Export default the slice reducer
