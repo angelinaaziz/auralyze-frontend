@@ -188,7 +188,7 @@ const posts = [
     content: questionBank,
   },
   {
-    title: "Mastering the Art of Inetrview Confidence",
+    title: "Mastering the Art of Interview Confidence",
     id: 2,
     date: 1677857496,
     src: `https://www.naceweb.org/uploadedimages/images/2022/feature/ask-answer-and-observe-preparing-students-to-experience-interviews-from-both-sides-of-the-table.png`,
@@ -196,7 +196,7 @@ const posts = [
     content: interviewConfidence,
   },
   {
-    title: "How can AI seriously help you with your interview prep?",
+    title: "How Can AI Seriously Help You With Your Interview Prep?",
     id: 3,
     date: 1677927496,
     src: `https://plat.ai/wp-content/uploads/aibuild.jpg.webp`,
