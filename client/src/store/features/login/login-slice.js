@@ -1,6 +1,6 @@
 import { createSlice} from '@reduxjs/toolkit';
 
-
+const isEmpty = require("is-empty");
 
 // Define an initial state
 const initialState = {
@@ -18,12 +18,16 @@ const loginSlice = createSlice({
     },
     setUserID(state,action){
       state.userID=action.payload.id
-    }
+    },
+    setCurrentUser(state,action){
+      state.isAuthenticated= !isEmpty(action.payload)
+      state.user= action.payload
+    },
   },
 });
 
 // Export each reducers function defined in createSlice
-export const { updateLoginState,setUserID } = loginSlice.actions;
+export const { updateLoginState,setUserID,setCurrentUser } = loginSlice.actions;
 
 
 // Export default the slice reducer
