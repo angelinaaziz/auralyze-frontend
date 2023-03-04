@@ -173,7 +173,7 @@ function QuestionPage(props) {
   const [chats, setChats]= useState([])
   const [videoRecorded, setVideoRecorded]=useState(false)
   const [videoBlob,setVideoBlob]=useState()
-
+  const [videoSent, setVideoSent]=useState(false)
   const userID = useSelector((state) => state.login.userID)
   console.log(userID)
   const message = useRef()
@@ -230,6 +230,8 @@ let handleSendChat = () => {
       axios.post("/api/users/save-answer", answerData).then((res ) => {
         console.log('response from save answers api..')
         console.log(res)
+        setVideoRecorded(false)
+        setVideoSent(true)
       })
     })
 
@@ -237,6 +239,12 @@ let handleSendChat = () => {
   }
   return (
     <React.Fragment>
+      {videoSent?
+        <div onClick={()=>setVideoSent(false)}>
+          <p>Video Submited!</p> 
+        </div>
+      :null}
+    
       <h2 className="question">  {selectedQuestion} </h2>
         <div className={classNames("questionArea", classes.mainContainer)} >
           <div className={classNames("questionAreaVideo questionPageSection", classes.videoSide)}>

@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef, Fragment } from "react";
+import React, { useState, useCallback, useRef, Fragment,useEffect  } from "react";
 import PropTypes from "prop-types";
 import { FormHelperText, TextField, Button, Checkbox, Typography, FormControlLabel } from "@mui/material";
 import withStyles from '@mui/styles/withStyles';
@@ -7,7 +7,7 @@ import HighlightedInformation from "../../../shared/components/HighlightedInform
 import ButtonCircularProgress from "../../../shared/components/ButtonCircularProgress";
 import VisibilityPasswordTextField from "../../../shared/components/VisibilityPasswordTextField";
 // import {registerUser} from "../../../store/actions/creators/auth"
-import { useDispatch } from "react-redux";
+import {useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import setAuthToken from "../../../store/actions/utils/setAuthToken";
 import jwt_decode from "jwt-decode";
@@ -35,16 +35,23 @@ function RegisterDialog(props) {
 
   const dispatch = useDispatch();
 
-  const { setStatus, theme, onClose, openTermsDialog, status, classes } = props;
+  const { setStatus, theme, onClose,history, openTermsDialog, status, classes } = props;
   const [isLoading, setIsLoading] = useState(false);
   const [hasTermsOfServiceError, setHasTermsOfServiceError] = useState(false);
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const [emailTaken, setEmailTaken]=useState(false)
+
   const registerTermsCheckbox = useRef();
   const registerEmail = useRef();
   const registerPassword = useRef();
   const registerPasswordRepeat = useRef();
+  const loginStatus = useSelector((state) => state.login.isAuthenticated)
 
+  useEffect(() => {
+    if (loginStatus) {
+        history.push("/c/question");
+    }
+    }) 
   const register = useCallback(() => {
     if (!registerTermsCheckbox.current.checked) {
       setHasTermsOfServiceError(true);
