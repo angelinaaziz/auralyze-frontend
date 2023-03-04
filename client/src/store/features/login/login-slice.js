@@ -1,6 +1,5 @@
 import { createSlice} from '@reduxjs/toolkit';
-
-
+const isEmpty = require("is-empty");
 
 // Define an initial state
 const initialState = {
@@ -18,7 +17,11 @@ const loginSlice = createSlice({
     },
     setUserID(state,action){
       state.userID=action.payload.id
-    }
+    },
+    setCurrentUser(state,action){
+      state.isAuthenticated= !isEmpty(action.payload)
+      state.user= action.payload
+    },
   },
 });
 

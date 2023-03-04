@@ -9,7 +9,7 @@ import store from './store/store';
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./store/actions/creators/auth";
-import {updateLoginState,setUserID} from "./store/features/login/login-slice"
+import {updateLoginState} from "./store/features/login/login-slice"
 const LoggedInComponent = lazy(() => import("./logged_in/components/Main"));
 
 const LoggedOutComponent = lazy(() => import("./logged_out/components/Main"));
@@ -23,7 +23,7 @@ if (localStorage.jwtToken) {
   // Set user and isAuthenticated
   store.dispatch(setCurrentUser(decoded));
   store.dispatch(updateLoginState(true));
-  store.dispatch(setUserID(decoded))
+  // store.dispatch(setUserID(decoded))
 // Check for expired token
   const currentTime = Date.now() / 1000; // to get in milliseconds
   if (decoded.exp < currentTime) {

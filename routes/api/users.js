@@ -108,13 +108,13 @@ router.post("/login", (req, res) => {
     });
   });
 });
-router.post("/save-answer",(req,res)=>{
+router.post("/save-answer", passport.authenticate('jwt', { session: false }), (req, res) =>{
   console.log('save answer api reached')
   console.log('here is the request body')
 
   console.log(req.body)
   console.log(req.files)
-  User.findById(req.body.userID).then(user => {
+  User.findById(req.user.id).then(user => {
     console.log('saving answer forthis user')
     console.log(user)
     const newAnswer = new Answer({question: req.body.question,
