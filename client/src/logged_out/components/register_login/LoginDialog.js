@@ -8,7 +8,7 @@ import FormDialog from "../../../shared/components/FormDialog";
 import HighlightedInformation from "../../../shared/components/HighlightedInformation";
 import ButtonCircularProgress from "../../../shared/components/ButtonCircularProgress";
 import VisibilityPasswordTextField from "../../../shared/components/VisibilityPasswordTextField";
-import {loginUser} from "../../../store/actions/creators/auth"
+// import {loginUser} from "../../../store/actions/creators/auth"
 import {useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import setAuthToken from "../../../store/actions/utils/setAuthToken";
@@ -100,13 +100,15 @@ function LoginDialog(props) {
               if(err.response.data.emailnotfound){
                 console.log('email not found')
                 setEmailNotFound(true)
+                setIsLoading(false);
               }
               if(err.response.data.passwordincorrect){
                 console.log('password incorrect')
                 setPasswordIncorrect(true)
+                setIsLoading(false);
               }
             })
-      }, [setIsLoading, loginEmail,history, loginPassword, setStatus,dispatch]);
+      }, [setIsLoading, loginEmail, loginPassword, setStatus,dispatch]);
 
   return (
     <Fragment>
