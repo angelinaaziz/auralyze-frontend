@@ -102,7 +102,7 @@ function HeadSection(props) {
                       variant={isWidthUpLg ? "h6" : "body1"}
                       color="textSecondary"
                     >
-                      <p justifyContent="center"> Practice 100s of questions with instant feedback</p>
+                      <p justifyContent="center"> Practice 100s of questions and get personalised feedback</p>
                     </Typography>
                   </Box>
                   <Button
