@@ -16,7 +16,7 @@ const posts = [
     title: "How to Prepare for a Dental School Interview",
     id: 1,
     date: 1676905380,
-    src: 'https://internationaldentistcentral.com/wp-content/uploads/2017/11/im-panel.jpg',
+    src: "/images/logged_out/auralyze_dental_thumbnail.png",
     snippet:
       "A video guide on how to prepare for a dental school interview. This video is aimed at UK dental school interviews but the advice is applicable to all dental school interviews.",
     content: Prepare,

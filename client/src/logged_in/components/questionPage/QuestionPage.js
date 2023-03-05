@@ -173,6 +173,7 @@ function QuestionPage(props) {
   const [chats, setChats]= useState([])
   const [videoRecorded, setVideoRecorded]=useState(false)
   const [videoBlob,setVideoBlob]=useState()
+  const [videoSent, setVideoSent]=useState(false)
 
   const userID = useSelector((state) => state.login.userID)
   console.log(userID)
@@ -230,6 +231,8 @@ let handleSendChat = () => {
       axios.post("/api/users/save-answer", answerData).then((res ) => {
         console.log('response from save answers api..')
         console.log(res)
+        setVideoRecorded(false)
+        setVideoSent(true)
       })
     })
 
@@ -237,6 +240,11 @@ let handleSendChat = () => {
   }
   return (
     <React.Fragment>
+        {videoSent?
+        <div onClick={()=>setVideoSent(false)}>
+          <p>Video Submitted! You'll recieve comprehensive feedback to your email in the next 24 hours!</p> 
+        </div>
+      :null}
       <h2 className="question">  {selectedQuestion} </h2>
         <div className={classNames("questionArea", classes.mainContainer)} >
           <div className={classNames("questionAreaVideo questionPageSection", classes.videoSide)}>
@@ -248,7 +256,7 @@ let handleSendChat = () => {
               <option value="Dentistry">Dentistry</option>
               <option value="Computer Science">Computer Science</option>
               </select>
-              <button className={classNames("changeQuestion", classes.btnTop)} style={{background: "#FEE64E"}} onClick={handleButtonClick}>Generate Question</button>
+              <button className={classNames("changeQuestion", classes.btnTop)} style={{background: "#FEE64E"}}  onClick={handleButtonClick} >Generate Question</button>
               </div>
             </div>
             <div className={classes.videoWrapper}>

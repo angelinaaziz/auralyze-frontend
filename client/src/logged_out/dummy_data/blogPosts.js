@@ -86,7 +86,7 @@ const questionBank = (
 
 
 const interviewConfidence= (
-  <Fragment>
+  <Fragment> 
   <Typography paragraph>
     As a school student, you’ve spent countless hours studying, working hard to maintain the highest grades, and participating in extracurricular activities to strengthen your application. And now, you’ve received an invitation to attend a university interview – congratulations! But as the day approaches, you find yourself struggling with nerves and anxiety. Don’t worry, it’s completely normal to feel this way. However, you don’t want your nerves to hinder your chances of success. <b>In this quick blog, we’ll give you tips and tricks on how to come across as more confident in your university interviews and get into your dream university.</b>
   </Typography>
@@ -100,7 +100,7 @@ const interviewConfidence= (
   Dress for success  👨‍🏫 
   </Typography>
   <Typography paragraph>
-  <iframe src="https://giphy.com/embed/Ym3AjvQQf4AfNZbvri" width="480" height="343" frameBorder="0" class="giphy-embed" allowFullScreen title="outfitgif"/><br />
+  <iframe src="https://giphy.com/embed/Ym3AjvQQf4AfNZbvri" width="480" height="343" class="giphy-embed" allowFullScreen title="outfitgif"/><br />
   Another great way to boost your confidence before an important job interview is to dress professionally. This doesn't necessarily mean having to wear a full suit and tie, but rather selecting an outfit that you feel confident and comfortable in. By feeling your best in what you're wearing, it will be reflected in your body language and communication skills. Dressing appropriately for an interview can also help to make a positive impression, as the interviewer will be able to see that you’ve taken the time to carefully select your attire.
   </Typography>  
   <Typography variant="h6" paragraph>
@@ -125,7 +125,7 @@ const interviewConfidence= (
     Don’t show your full hand 🃏
   </Typography> 
   <Typography paragraph>
-  <iframe src="https://giphy.com/embed/B7M1hhOdSd4iY" width="480" height="411" frameBorder="0" class="giphy-embed" allowFullScreen title="jokergif"></iframe><br />
+  <iframe src="https://giphy.com/embed/B7M1hhOdSd4iY" width="480" height="411" class="giphy-embed" allowFullScreen title="jokergif"></iframe><br />
   Now our final tip is a unique one - simply put when you answer a question you should not say everything to the interviewer. Think of a game of UNO - you don’t want to use all the +2s at once because you will lose all your lifelines. Instead you pace yourself - same philosophy with interviews, you want to allow yourself multiple examples for you answers but you do not necessarily have to mention them all at once. General rule is to mention one example per question and add on only when prompted or time permits. This will allow you to never be stumped when asked ‘ anything else’ or ‘ do you have any more examples of x skill’.
   </Typography>   
   <Typography paragraph>
@@ -140,10 +140,10 @@ const aiHelp = (
   As a student applying to university, the interview process can be intimidating. But now, with the advent of AI-powered interview feedback, the process is becoming way more objective and transparent (which means you actually know if your answers are any good). In this blog post, we'll explore how AI is transforming admissions process and how <b>Auralyze.ai</b> can help you get into your dream career - let’s go!
   </Typography>  
   <Typography variant="h6" paragraph>
-  What is Ai-powered feedback? 🤖 
+  What is AI-powered feedback? 🤖 
   </Typography>
   <Typography paragraph>
-  <iframe src="https://giphy.com/embed/ckJF143W1gBS8Hk833" width="480" height="363" frameBorder="0" class="giphy-embed" allowFullScreen title="ai"></iframe><br />
+  <iframe src="https://giphy.com/embed/ckJF143W1gBS8Hk833" width="480" height="363" class="giphy-embed" allowFullScreen title="ai" textAlign="center"></iframe><br />
   So you must be thinking wow Ai sounds cool but what does it actually do? Now , we wish you could put a question into Ai and get the perfect answer but the reality is, Ai is not a human - as such, you will never get that perfect natural sounding answer [ but it’s scarily close…].<br></br><br></br>
   Instead, Ai can be seen as more of a supportive tool that allows for quick and more consistent feedback on a large input of answers. This means that you can get very quick and **personalised** feedback on a load of answers without having to book in a 1-to-1 session or get generic feedback from family and friends [ like when your mum tells you your answer was GREAT and you just said your biggest weakness is that you “WoRk tOo hArD”…].<br></br><br></br>
   Any time you come across a question you can get super fast insights into what the question is actually looking for and whether or not your answer hits the key components of an exemplar answer.
@@ -152,7 +152,7 @@ const aiHelp = (
   Can’t I just use ChatGPT? 💻 
   </Typography>
   <Typography paragraph>
-  <iframe src="https://giphy.com/embed/SnbwVKTj0vBQSK47us" width="326" height="480" frameBorder="0" class="giphy-embed" allowFullScreen title="chatgpt"></iframe><br />
+  <iframe src="https://giphy.com/embed/SnbwVKTj0vBQSK47us" width="326" height="480" class="giphy-embed" allowFullScreen title="chatgpt"></iframe><br />
   Now ChatGPT is a super powerful language processing model and can give some pretty good generic feedback - however, it can’t provide high quality feedback for video interviews. <br></br><br></br>
   This is because video interviews capture not only the spoken language, but also nonverbal cues like body language and tone of voice, which can be just as important in understanding a candidate's communication skills and personality. <br></br><br></br>
   AI models that are specifically designed for video interviews, [Like us lol] , can analyse these nonverbal cues in addition to spoken language, providing more accurate and comprehensive feedback to candidates. So while ChatGPT may be a useful tool for certain applications, it may not be the best choice for providing feedback on interviews because we all know that communication is more than just what you say but also <i>how you say it.</i> <br></br><br></br>
@@ -161,7 +161,7 @@ const aiHelp = (
   What are the benefits of using an Ai-based tool compared to traditional feedback? 👴👵 
   </Typography>
   <Typography paragraph>
-  <iframe src="https://giphy.com/embed/LTYT5GTIiAMBa" width="480" height="317" frameBorder="0" class="giphy-embed" allowFullScreen title="baby"></iframe><br />
+  <iframe src="https://giphy.com/embed/LTYT5GTIiAMBa" width="480" height="317" class="giphy-embed" allowFullScreen title="baby"></iframe><br />
   Now with this one we don’t know where to start because there are just so many benefits and we wouldn’t be pouring our heart and soul into building something that isn’t worth using butttt let’s put our money where our mouth is: <br></br><br></br>
   One of the best advantages is that Ai-based tools provide greater objectivity, efficiency, and personalization to your feedback. Traditional interview feedback methods can be subjective and inconsistent, relying on the opinions of individual interviewers and you will get a million opinions on one question and 7 different ways to answer ‘ Tell me a bit about yourself’ . With AI-based interview support, feedback is unbiased and based on an analysis of specific linguistic and non-linguistic factors that can impact communication effectiveness. This means you receive a more reliable and accurate assessment of your interview performance, which can help identify where to improve.<br></br><br></br> 
   Of course individual feedback is still great but you need strong foundations to build upon. There is no point in your paying to do a mock interview or do some interview training if you don’t have the basics locked in - would you ride a bike without training wheels on your first try? Ai-based feedback is tailored to <i>you</i> but built on exemplar answers - allowing for customisability and for you to track how well your answers match up to the theoretical best.<br></br><br></br>

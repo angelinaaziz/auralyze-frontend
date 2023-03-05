@@ -237,7 +237,7 @@ function FeatureSection() {
               variant="contained"
               className={classes.extraLargeButtonSee}
               classes={{ label: classes.extraLargeButtonLabel }}
-              href=""
+              href="/blog/post/how-can-ai-seriously-help-you-with-your-interview-prep"
             >See How ➡️</Button></p></div></div></Paper>
         <h1 className={classes.featureHeading}>Practice.</h1>
         <Paper className={classes.bubble2}>
