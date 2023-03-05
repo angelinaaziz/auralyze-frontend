@@ -12,7 +12,7 @@ import setAuthToken from "../../../store/actions/utils/setAuthToken";
 import jwt_decode from "jwt-decode";
 import { updateLoginState } from "../../../store/features/login/login-slice";
 import { setCurrentUser } from "../../../store/actions/creators/auth";
-
+import { withRouter } from 'react-router-dom';
 const isEmpty = require("is-empty");
 const styles = (theme) => ({
   link: {
@@ -317,4 +317,4 @@ RegisterDialog.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles, { withTheme: true })(RegisterDialog);
+export default withRouter(withStyles(styles, { withTheme: true })(RegisterDialog));
