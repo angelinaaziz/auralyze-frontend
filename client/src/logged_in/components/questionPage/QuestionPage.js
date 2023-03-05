@@ -25,7 +25,7 @@ const styles = (theme) => ({
   },
   videoWrapper: {
     width: "100%",
-    height: "620px"
+    height: "520px"
   },
 
   btnTop: {
@@ -146,12 +146,16 @@ const styles = (theme) => ({
     alignItems: "center",
     justifyContent: "center"
   },
+  submitMessage: {
+    fontWeight: "bold",
+    fontSize: "38px"
+  },
   submitInput: {
+    marginLeft: "auto",
     border: "none",
     background: "#bfa4f8",
-    height: "40px",
-    width: "90px",
-    borderRadius: "10px",
+    padding: "15px",
+    borderRadius: "10px 10px 0 0",
     color: "white",
     display: "flex",
     alignItems: "center",
@@ -246,7 +250,7 @@ function QuestionPage(props) {
     <React.Fragment>
       {videoSent ?
         <div onClick={() => setVideoSent(false)}>
-          <p>Video Submitted! You'll recieve comprehensive feedback to your email in the next 24 hours!</p>
+          <p className={classes.submitMessage} >Video Submitted! You'll recieve comprehensive feedback to your email in the next 24 hours!</p>
         </div>
         : null}
       <h2 className="question">  {selectedQuestion} </h2>
@@ -261,6 +265,16 @@ function QuestionPage(props) {
                 <option value="Computer Science">Computer Science</option>
               </select>
               <button className={classNames("changeQuestion", classes.btnTop)} style={{ background: "#FEE64E" }} onClick={handleButtonClick} >Generate Question</button>
+
+              {videoRecorded ?
+
+                <button className={classes.submitInput}
+                  onClick={() => handleSubmitVideo()}>
+                  Submit Response
+                </button>
+                :
+                null
+              }
             </div>
           </div>
           <div className={classes.videoWrapper}>
@@ -310,16 +324,6 @@ function QuestionPage(props) {
 
           </div>
         </div>
-        {videoRecorded ?
-          <div>
-            <button className={classes.submitInput}
-              onClick={() => handleSubmitVideo()}>
-              <p>Submit Response</p>
-            </button>
-          </div>
-          :
-          null
-        }
 
         <div className={classNames("questionAreaNotes questionPageSection", classes.textSide)}>
           <p className={classes.chatHead}>Some Space to gather your thoughts</p>
