@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef, Fragment, useEffect} from "react";
+import React, { useState, useCallback, useRef, Fragment, useEffect } from "react";
 import PropTypes from "prop-types";
 import { FormHelperText, TextField, Button, Checkbox, Typography, FormControlLabel } from "@mui/material";
 import withStyles from '@mui/styles/withStyles';
@@ -10,8 +10,8 @@ import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import setAuthToken from "../../../store/actions/utils/setAuthToken";
 import jwt_decode from "jwt-decode";
-import {updateLoginState} from "../../../store/features/login/login-slice";
-import {setCurrentUser} from "../../../store/actions/creators/auth";
+import { updateLoginState } from "../../../store/features/login/login-slice";
+import { setCurrentUser } from "../../../store/actions/creators/auth";
 
 const isEmpty = require("is-empty");
 const styles = (theme) => ({
@@ -39,8 +39,10 @@ function RegisterDialog(props) {
   const [isLoading, setIsLoading] = useState(false);
   const [hasTermsOfServiceError, setHasTermsOfServiceError] = useState(false);
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
-  const [emailTaken, setEmailTaken]=useState(false)
+  const [emailTaken, setEmailTaken] = useState(false)
   const registerTermsCheckbox = useRef();
+  const registerFirstName = useRef();
+  const registerLastName = useRef();
   const registerEmail = useRef();
   const registerPassword = useRef();
   const registerPasswordRepeat = useRef();
@@ -48,9 +50,9 @@ function RegisterDialog(props) {
 
   useEffect(() => {
     if (loginStatus) {
-        history.push("/c/question");
+      history.push("/c/question");
     }
-    }) 
+  })
 
   const register = useCallback(() => {
     if (!registerTermsCheckbox.current.checked) {
@@ -63,8 +65,12 @@ function RegisterDialog(props) {
       setStatus("passwordsDontMatch");
       return;
     }
-    let registerData={email:registerEmail.current.value,
-                      password:registerPassword.current.value}
+    let registerData = {
+      first_name: registerFirstName.current.value,
+      last_name: registerLastName.current.value,
+      email: registerEmail.current.value,
+      password: registerPassword.current.value
+    }
     setIsLoading(true);
     axios.post("api/users/register", registerData).then(res => {
       // Set token to localStorage
@@ -77,7 +83,7 @@ function RegisterDialog(props) {
       // Set current user
       if (!isEmpty(decoded)) {
         setStatus(null);
-        
+
         console.log(decoded)
         dispatch(updateLoginState(true));
         // dispatch(setUserID(decoded))
@@ -85,15 +91,13 @@ function RegisterDialog(props) {
         setIsLoading(false);
       }
     })
-      .catch(err =>
-  
-        {
-          if(err.response.data.emailTaken){
-            console.log('email already taken')
-            setEmailTaken(true)
-          }
-          
-        })
+      .catch(err => {
+        if (err.response.data.emailTaken) {
+          console.log('email already taken')
+          setEmailTaken(true)
+        }
+
+      })
 
 
   }, [
@@ -120,6 +124,28 @@ function RegisterDialog(props) {
       hasCloseIcon
       content={
         <Fragment>
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            label="First Name"
+            inputRef={registerFirstName}
+            autoFocus
+            autoComplete="off"
+            type="text"
+          />
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            label="Last Name"
+            inputRef={registerLastName}
+            autoFocus
+            autoComplete="off"
+            type="text"
+          />
           <TextField
             variant="outlined"
             margin="normal"

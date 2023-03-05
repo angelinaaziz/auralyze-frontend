@@ -30,6 +30,7 @@ const styles = (theme) => ({
   card: {
     boxShadow: theme.shadows[4],
   },
+
 });
 
 function BlogPost(props) {
@@ -45,7 +46,13 @@ function BlogPost(props) {
       className={classNames("lg-p-top", classes.wrapper)}
       display="flex"
       justifyContent="center"
-      background= "linear-gradient(to bottom, #BFA4F8 0%, #FEE64E 100%)"
+      background="linear-gradient(to bottom, #BFA4F8 0%, #FEE64E 100%)"
+      sx={{
+        '.giphy-embed': {
+          margin: 'auto',
+          display: 'block'
+        }
+      }}
     >
       <div className={classes.blogContentWrapper}>
         <Grid container spacing={5}>
@@ -61,6 +68,7 @@ function BlogPost(props) {
                   })}
                 </Typography>
               </Box>
+
               <ZoomImage className={classes.img} src={src} alt="" />
               <Box p={3}>
                 {content}
@@ -75,7 +83,7 @@ function BlogPost(props) {
                             description="Check out this amazing article on Auralyze.ai!"
                             disableElevation
                             variant="contained"
-                            className="text-white"
+                            W className="text-white"
                             classes={{
                               label: "text-white",
                             }}

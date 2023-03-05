@@ -15,20 +15,24 @@ router.post("/register", (req, res) => {
   console.log('here is the req body')
   console.log(req.body)
 
-    // Looking up a user by the email used to register
-    User.findOne({ email: req.body.email }).then(user => {
-      // Returning an error if a user is found
-      if (user) {
-        console.log('user email taken')
-        return res.status(400).json({ emailTaken: true });
-      }
-      // Otherwise creating a new user
-      else {
-        const newUser = new User({
-          email: req.body.email,
-          password: req.body.password,
-          type:req.body.type
+  // Looking up a user by the email used to register
+  User.findOne({ email: req.body.email }).then(user => {
+    // Returning an error if a user is found
+    if (user) {
+      console.log('user email taken')
+      return res.status(400).json({ emailTaken: true });
+    }
+    // Otherwise creating a new user
+    else {
+
+      const newUser = new User({
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        email: req.body.email,
+        password: req.body.password,
+        type: req.body.type
       });
+
       // Hash password before saving in database
       bcrypt.genSalt(10, (err, salt) => {
         bcrypt.hash(newUser.password, salt, (err, hash) => {
@@ -36,22 +40,23 @@ router.post("/register", (req, res) => {
           newUser.password = hash;
           newUser.save()
             .then(user => {// Create JWT Payload
-            const payload = {
-              id: user.id,
-              name: user.name
-            };
-      // Sign token
-      jwt.sign(payload, keys.secretOrKey,
-        {
-          expiresIn: 31556926 // 1 year in seconds
-        },
-          (err, token) => {
-            res.json({
-              success: true,
-              token: "Bearer " + token
-            });
-          }
-        )}).catch(err => console.log(err));
+              const payload = {
+                id: user.id,
+                name: user.name
+              };
+              // Sign token
+              jwt.sign(payload, keys.secretOrKey,
+                {
+                  expiresIn: 31556926 // 1 year in seconds
+                },
+                (err, token) => {
+                  res.json({
+                    success: true,
+                    token: "Bearer " + token
+                  });
+                }
+              )
+            }).catch(err => console.log(err));
         });
       });
     }
@@ -108,7 +113,7 @@ router.post("/login", (req, res) => {
     });
   });
 });
-router.post("/save-answer", passport.authenticate('jwt', { session: false }), (req, res) =>{
+router.post("/save-answer", passport.authenticate('jwt', { session: false }), (req, res) => {
   console.log('save answer api reached')
   console.log('here is the request body')
 
@@ -117,15 +122,22 @@ router.post("/save-answer", passport.authenticate('jwt', { session: false }), (r
   User.findById(req.user.id).then(user => {
     console.log('saving answer forthis user')
     console.log(user)
-    const newAnswer = new Answer({question: req.body.question,
-                                  answerURL:req.body.video});
+    const newAnswer = new Answer({
+      question: req.body.question,
+      answerURL: req.body.video
+    });
     user.answers.push(newAnswer);
     user.save();
-    let newMessage="Here is the question: " +req.body.question+ " \n\nhere is the user email: " + user.email + "\n\nAnd here is the new video: "+" "+ req.body.video 
+    let newMessage = "Here is the question: " +
+      req.body.question +
+      " \n\nhere is the user first name: " + user.first_name +
+      " \n\nhere is the user last name: " + user.last_name +
+      " \n\nhere is the user email: " + user.email +
+      "\n\nAnd here is the new video: " + " " + req.body.video
     // sendEmail(user.email, "New Answer Video", newMessage); uncomment to send email to user as well
     sendEmail("angelinaaziz1@gmail.com", "New Answer Video", newMessage)
     sendEmail("elsayadfaris@gmail.com", "New Answer Video", newMessage)
   })
-  return res.json({videoAdded:true})
+  return res.json({ videoAdded: true })
 })
 module.exports = router;
