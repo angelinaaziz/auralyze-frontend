@@ -92,7 +92,7 @@ function NavBar(props) {
               alignItems="center"
               flexDirection="column"
               height="100%">
-              <a href="/"><img src="/images/Auralyze_ai_colour_logo.png" alt="Logo"  width={theme.spacing(20)} height={theme.spacing(6)}/></a>
+              <a href="/"><img src="/images/Auralyze_ai_colour_logo.png" alt="Logo" width={theme.spacing(20)} height={theme.spacing(6)} /></a>
             </Box>
           </div>
           <div>

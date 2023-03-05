@@ -5,7 +5,7 @@ import DemoVideo from "./DemoVideo";
 import FeatureSection from "./FeatureSection";
 
 function Home(props) {
-  const { selectHome } = props;
+  const { selectHome, handleMobileDrawerClose } = props;
   useEffect(() => {
     selectHome();
   }, [selectHome]);
