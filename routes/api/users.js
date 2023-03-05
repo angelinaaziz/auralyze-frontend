@@ -124,7 +124,7 @@ router.post("/save-answer", passport.authenticate('jwt', { session: false }), (r
     let newMessage="Here is the question: " +req.body.question+ " \n\nhere is the user email: " + user.email + "\n\nAnd here is the new video: "+" "+ req.body.video 
     // sendEmail(user.email, "New Answer Video", newMessage); uncomment to send email to user as well
     sendEmail("angelinaaziz1@gmail.com", "New Answer Video", newMessage)
-    sendEmail("elsayadfaris@gmail.com", "New Answer Video", newMessage)
+    //sendEmail("elsayadfaris@gmail.com", "New Answer Video", newMessage)
   })
   return res.json({videoAdded:true})
 })
