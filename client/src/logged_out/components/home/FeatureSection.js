@@ -243,7 +243,7 @@ function FeatureSection() {
         <Paper className={classes.bubble2}>
           <div className={`${classes.bubbles} ${classes.flexColumnReverse}`}>
             <div alignItems="center" textAlign="center">
-              <h2 className={classes.Bank} > A Massive Bank <br></br> of Questions</h2> <p> Have access to questions across multiple courses including : Oxbridge, Medicine, Dentistry and Law.</p><Button
+              <h2 className={classes.Bank} > A Massive Bank <br></br> of Questions</h2> <p> Have access to questions across multiple courses including : Oxbridge, Med, Dentistry and Law.</p><Button
                 variant="contained"
                 className={classes.extraLargeButtonTry}
                 classes={{ label: classes.extraLargeButtonLabel }}

@@ -1,10 +1,12 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useCallback, useState } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { Typography, Button, Box } from "@mui/material";
 import withStyles from "@mui/styles/withStyles";
 import WaveBorder from "../../../shared/components/WaveBorder";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import DialogSelector from "../register_login/DialogSelector";
+
 
 const styles = (theme) => ({
   extraLargeButtonLabel: {
@@ -73,6 +75,17 @@ function HeadSection(props) {
   const { classes, theme } = props;
   const isWidthUpLg = useMediaQuery(theme.breakpoints.up("lg"));
 
+  const [dialogOpen, setDialogOpen] = useState(null);
+
+  const closeDialog = useCallback(() => {
+    setDialogOpen(null);
+  }, [setDialogOpen]);
+
+  const openRegisterDialog = useCallback(() => {
+    setDialogOpen("register");
+  }, [setDialogOpen]);
+
+
   return (
     <Fragment>
       <div className={classNames("lg-p-top", classes.wrapper)}>
@@ -110,7 +123,7 @@ function HeadSection(props) {
                     color="primary"
                     className={classes.extraLargeButton}
                     classes={{ label: classes.extraLargeButtonLabel }}
-                    href=""
+                    onClick={openRegisterDialog}
                   >
                     Boost your interview now 🚀
                   </Button>
@@ -121,6 +134,11 @@ function HeadSection(props) {
           <img src="/images/logged_out/Yellow-blob.png" alt="blob" className={classes.fixBlob2} />
         </div>
       </div>
+      <DialogSelector
+        dialogOpen={dialogOpen}
+        onClose={closeDialog}
+        openRegisterDialog={openRegisterDialog}
+      />
       <WaveBorder
         upperColor={theme.palette.secondary.main}
         lowerColor="#FEE64E"
