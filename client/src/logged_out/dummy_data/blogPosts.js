@@ -145,7 +145,7 @@ const aiHelp = (
   <Typography paragraph>
   <iframe src="https://giphy.com/embed/ckJF143W1gBS8Hk833" width="480" height="363" class="giphy-embed" allowFullScreen title="ai" textAlign="center"></iframe><br />
   So you must be thinking wow Ai sounds cool but what does it actually do? Now , we wish you could put a question into Ai and get the perfect answer but the reality is, Ai is not a human - as such, you will never get that perfect natural sounding answer [ but it’s scarily close…].<br></br><br></br>
-  Instead, Ai can be seen as more of a supportive tool that allows for quick and more consistent feedback on a large input of answers. This means that you can get very quick and **personalised** feedback on a load of answers without having to book in a 1-to-1 session or get generic feedback from family and friends [ like when your mum tells you your answer was GREAT and you just said your biggest weakness is that you “WoRk tOo hArD”…].<br></br><br></br>
+  Instead, AI can be seen as more of a supportive tool that allows for quick and more consistent feedback on a large input of answers. This means that you can get very quick and <b>personalised</b> feedback on a load of answers without having to book in a 1-to-1 session or get generic feedback from family and friends [ like when your mum tells you your answer was GREAT and you just said your biggest weakness is that you “WoRk tOo hArD”…].<br></br><br></br>
   Any time you come across a question you can get super fast insights into what the question is actually looking for and whether or not your answer hits the key components of an exemplar answer.
   </Typography>  
   <Typography variant="h6" paragraph>

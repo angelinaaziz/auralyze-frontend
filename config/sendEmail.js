@@ -6,16 +6,16 @@ const sendEmail = async (email, subject, text) => {
     try {
         // Defines the email its sending from
         const transporter = nodemailer.createTransport({
-            service: 'FastMail',
+            service: 'Gmail',
             auth: {
-                user: "auralyze@fastmail.com",
-                pass: "x7yzjlp348pbrhx6",
+                user: "support@auralyze.ai",
+                pass: process.env.GmailPass,
             },
             
         });
         // Defines the content of the message
         await transporter.sendMail({
-            from: "auralyze@fastmail.com",
+            from: "support@auralyze.ai",
             to: email,
             subject: subject,
             text: text,

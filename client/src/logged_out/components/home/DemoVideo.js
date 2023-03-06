@@ -32,7 +32,7 @@ export default function DemoVideo() {
     <div style={{ background: `linear-gradient(to bottom,  #FEE64E 0%, #BFA4F8 100%)`, position: 'relative' }}>
       <Card className={[classes.bigcard, "card"]}>
         <iframe className={classes.video} title="myFrame"
-          src="https://www.youtube.com/embed/zWRKWkFF51w">
+          src="https://www.youtube.com/embed/dECQDSZK7pE">
         </iframe>
       </Card>
     </div>
