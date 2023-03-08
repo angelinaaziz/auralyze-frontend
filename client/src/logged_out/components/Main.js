@@ -50,6 +50,11 @@ function Main(props) {
     setSelectedTab("Video");
   }, [setSelectedTab]);
 
+  const selectFaq = useCallback(() => {
+    smoothScrollTop();
+    document.title = "Auralyze.ai- Faqs";
+    setSelectedTab("Faq");
+  }, [setSelectedTab]);
 
   const openLoginDialog = useCallback(() => {
     setDialogOpen("login");
@@ -160,6 +165,7 @@ function Main(props) {
         selectHome={selectHome}
         selectBlog={selectBlog}
         selectVideo={selectVideo}
+        selectFaq={selectFaq}
       />
       <Footer />
     </div>

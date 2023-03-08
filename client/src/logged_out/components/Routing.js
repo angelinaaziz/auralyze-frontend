@@ -7,10 +7,11 @@ import Blog from "./blog/Blog";
 import BlogPost from "./blog/BlogPost";
 import Video from "./video/Video";
 import videoPost from "./video/VideoPost";
+import Faq from "./faq/faq";
 import useLocationBlocker from "../../shared/functions/useLocationBlocker";
 
 function Routing(props) {
-  const { blogPosts, selectBlog, selectHome, videoPosts, selectVideo } = props;
+  const { blogPosts, selectBlog, selectHome, videoPosts, selectVideo, selectFaq } = props;
   useLocationBlocker();
   return (
     <Switch>
@@ -56,6 +57,12 @@ function Routing(props) {
         selectVideo={selectVideo}
         videoPosts={videoPosts}
       />
+      <PropsRoute
+        exact
+        path="/faq"
+        component={Faq}
+        selectFaq={selectFaq}
+      />
       <PropsRoute path="/" component={Home} selectHome={selectHome} />
     </Switch>
   );
@@ -67,6 +74,7 @@ Routing.propTypes = {
   selectHome: PropTypes.func.isRequired,
   selectBlog: PropTypes.func.isRequired,
   selectVideos: PropTypes.func.isRequired,
+  selectFaq: PropTypes.func.isRequired,
 };
 
 export default memo(Routing);
