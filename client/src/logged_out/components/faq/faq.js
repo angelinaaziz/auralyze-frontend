@@ -59,7 +59,7 @@ const FAQList = [
   
     return (
       <div className={`faq ${id === activeId ? "active" : ""}`} onClick={handleClick}>
-        <div className="question">{question}</div>
+        <div className="question"><b>{question}</b></div>
         {id === activeId && <div className="answer">{answer}</div>}
       </div>
     );

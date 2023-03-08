@@ -60,11 +60,6 @@ function NavBar(props) {
       icon: <HomeIcon className="text-white" />
     },
     {
-      link: "/faq",
-      name: "FAQs",
-      icon: <BookIcon className="text-white" />
-    },
-    {
       link: "/blog",
       name: "Blog",
       icon: <BookIcon className="text-white" />
@@ -72,6 +67,11 @@ function NavBar(props) {
     {
       link: "/video",
       name: "Videos",
+      icon: <BookIcon className="text-white" />
+    },
+    {
+      link: "/faq",
+      name: "FAQs",
       icon: <BookIcon className="text-white" />
     },
     {
